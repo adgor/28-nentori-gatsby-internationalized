@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
     <div>
       {config.map((lang) => (
         <LocalizedLink to={path} key={lang.code} language={lang.code}>
-          <span className="mx-2">{lang.code.toUpperCase()}</span>
+          <span className="mr-2 text-white">{lang.code.toUpperCase()}</span>
         </LocalizedLink>
       ))}
     </div>
