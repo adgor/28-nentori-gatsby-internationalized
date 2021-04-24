@@ -1,0 +1,19 @@
+{
+  "helloWorld": "Hello World",
+  "indexNote": "This is the Index page.",
+  "secondPageLink": "Link to second page",
+  "thirdPageLink": "Link to third page",
+  "indexPageLink": "Link to index page",
+  "secondPageGermanLink": "Link to second page (German)",
+  "indexPageEnglishLink": "Link to Index page (English)",
+  "overviewLang": "Overview of languages",
+  "thirdPage": "Third page",
+  "thirdNote": "This is the third page",
+  "notFound": "Page not found",
+  "home": "Home",
+  "projects": "Projects",
+  "teachingStaff": "Teaching staff",
+  "program": "Program",
+  "contact": "Contact us",
+  "aboutUs": "About us"
+}

@@ -49,12 +49,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-theme-i18n-react-i18next`,
+      resolve: `gatsby-theme-i18n-react-intl`,
       options: {
-        locales: `./i18n/react-i18next`,
-        i18nextOptions: {
-          ns: ["translation", "blog", "404"],
-        },
+        defaultLocale: `./i18n/react-intl/sq.json`,
       },
     },
     {

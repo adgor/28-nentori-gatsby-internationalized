@@ -1,12 +1,13 @@
-import { Link } from "gatsby";
 import React, { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { MenuIcon } from "@heroicons/react/solid";
+import { useIntl } from "react-intl";
+import { LocalizedLink } from "gatsby-theme-i18n";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
-
+  const intl = useIntl();
   return (
     <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-biscay-500">
       <div className="flex items-center flex-shrink-0 mr-6 text-white">
@@ -26,20 +27,43 @@ function Header({ siteTitle }) {
           isExpanded ? `block` : `hidden`
         } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
       >
-        <div className="flex items-baseline ml-10 space-x-4 lg:flex-grow">
-          <Link
-            to={`/`}
-            href="#responsive-header"
-            className="px-3 py-2 text-sm font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
+        <div className="flex items-baseline ml-10 space-x-2 lg:flex-grow">
+          <LocalizedLink
+            to="/"
+            className="px-3 py-2 text-base  font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
           >
-            Home
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+            {intl.formatMessage({ id: "home" })}
+          </LocalizedLink>
+          <LocalizedLink
+            to="/about"
+            className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
           >
-            page 2
-          </Link>
+            {intl.formatMessage({ id: "aboutUs" })}
+          </LocalizedLink>
+          <LocalizedLink
+            to="/projects"
+            className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
+          >
+            {intl.formatMessage({ id: "projects" })}
+          </LocalizedLink>
+          <LocalizedLink
+            to="/staff"
+            className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
+          >
+            {intl.formatMessage({ id: "teachingStaff" })}
+          </LocalizedLink>
+          <LocalizedLink
+            to="/program"
+            className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
+          >
+            {intl.formatMessage({ id: "program" })}
+          </LocalizedLink>
+          <LocalizedLink
+            to="/contact"
+            className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
+          >
+            {intl.formatMessage({ id: "contact" })}
+          </LocalizedLink>
         </div>
         <div className="flex items-center mt-6 lg:mt-0">
           <LanguageSwitcher />

@@ -28,13 +28,12 @@
     "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-source-filesystem": "^3.3.0",
     "gatsby-theme-i18n": "^2.0.0",
-    "gatsby-theme-i18n-react-i18next": "^2.0.0",
+    "gatsby-theme-i18n-react-intl": "^2.0.0",
     "gatsby-transformer-sharp": "^3.3.0",
-    "i18next": "^20.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^11.8.13"
+    "react-intl": "^5.16.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

@@ -1,35 +1,35 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { useTranslation } from "react-i18next";
 import { LocalizedLink, LocalesList } from "gatsby-theme-i18n";
+import { useIntl } from "react-intl";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const Index = ({ data }) => {
-  const { t } = useTranslation();
+  const intl = useIntl();
   return (
     <Layout>
-      <Seo title={t("home")} />
-      <div className="p-4 text-white transition duration-500 bg-scooter-800 dark:bg-mirage-900">
-        <h1 className="bg-ceriseRed-600 dark:bg-paleSky-600 ">
-          {t("helloWorld")}
-        </h1>
-        <p>{t("indexNote")}</p>
-      </div>
+      <Seo title={intl.formatMessage({ id: "home" })} />
+      <h1>{intl.formatMessage({ id: "helloWorld" })}</h1>
+      <p>{intl.formatMessage({ id: "indexNote" })}</p>
       <p>
-        <LocalizedLink to="/page-2/">{t("secondPageLink")}</LocalizedLink>
+        <LocalizedLink to="/page-2/">
+          {intl.formatMessage({ id: "secondPageLink" })}
+        </LocalizedLink>
       </p>
       <p>
-        <LocalizedLink to="/page-3/">{t("thirdPageLink")}</LocalizedLink>
+        <LocalizedLink to="/page-3/">
+          {intl.formatMessage({ id: "thirdPageLink" })}
+        </LocalizedLink>
       </p>
       <p>
         <LocalizedLink to="/page-2/" language="de">
-          {t("secondPageGermanLink")}
+          {intl.formatMessage({ id: "secondPageGermanLink" })}
         </LocalizedLink>
       </p>
       <p>
         <LocalizedLink to="/" language="en">
-          {t("indexPageEnglishLink")}
+          {intl.formatMessage({ id: "indexPageEnglishLink" })}
         </LocalizedLink>
       </p>
       <ul>
@@ -41,7 +41,7 @@ const Index = ({ data }) => {
           </li>
         ))}
       </ul>
-      <h2>{t("overviewLang")}</h2>
+      <h2>{intl.formatMessage({ id: "overviewLang" })}</h2>
       <LocalesList />
     </Layout>
   );

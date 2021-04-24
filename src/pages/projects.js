@@ -12,7 +12,7 @@ const Page3 = () => {
       <h1>{intl.formatMessage({ id: "thirdPage" })}</h1>
       <p>{intl.formatMessage({ id: "thirdNote" })}</p>
       <p>
-        <LocalizedLink to="/about/">
+        <LocalizedLink to="/page-2/">
           {intl.formatMessage({ id: "secondPageLink" })}
         </LocalizedLink>
       </p>

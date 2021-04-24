@@ -9,7 +9,7 @@ export default function ThemeSwitcher() {
       {colorTheme === "light" ? (
         <SunIcon className="w-5 h-5 text-broom-500 " />
       ) : (
-        <MoonIcon className="w-5 h-5 text-paleSky-700" />
+        <MoonIcon className="w-5 h-5 text-broom-900" />
       )}
     </span>
   );
