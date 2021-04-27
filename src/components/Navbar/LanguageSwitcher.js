@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
     <div>
       {config.map((lang) => (
         <LocalizedLink to={path} key={lang.code} language={lang.code}>
-          <span className="mr-2 text-sm text-white">
+          <span className="mr-2 text-sm text-paleSky-300 hover:text-white">
             {lang.code.toUpperCase()}
           </span>
         </LocalizedLink>
