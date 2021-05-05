@@ -10,8 +10,10 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Seo title={intl.formatMessage({ id: "home" })} />
-      <h1>{intl.formatMessage({ id: "helloWorld" })}</h1>
-      <p>{intl.formatMessage({ id: "indexNote" })}</p>
+      <div className="p-6 text-white bg-biscay-500 dark:bg-biscay-900">
+        <h1 className="">{intl.formatMessage({ id: "helloWorld" })}</h1>
+        <p>{intl.formatMessage({ id: "indexNote" })}</p>
+      </div>
       <p>
         <LocalizedLink to="/page-2/">
           {intl.formatMessage({ id: "secondPageLink" })}
