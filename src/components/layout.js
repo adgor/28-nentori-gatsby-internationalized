@@ -1,6 +1,6 @@
 import * as React from "react";
 import { MDXProvider } from "@mdx-js/react";
-import { MdxLink, LocalizedLink } from "gatsby-theme-i18n";
+import { MdxLink } from "gatsby-theme-i18n";
 import Navbar from "./Navbar/Navbar";
 
 const components = {
@@ -11,9 +11,6 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <Navbar />
-      <header>
-        <LocalizedLink to="/">Home</LocalizedLink>
-      </header>
       <main>
         <MDXProvider components={components}>{children}</MDXProvider>
       </main>

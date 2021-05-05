@@ -5,7 +5,7 @@ import { MoonIcon, SunIcon } from "@heroicons/react/outline";
 export default function ThemeSwitcher() {
   const [colorTheme, setTheme] = useDarkMode();
   return (
-    <span className="ml-3 " onClick={() => setTheme(colorTheme)}>
+    <span className="ml-3 cursor-pointer " onClick={() => setTheme(colorTheme)}>
       {colorTheme === "light" ? (
         <SunIcon className="w-5 h-5 text-broom-500 " />
       ) : (

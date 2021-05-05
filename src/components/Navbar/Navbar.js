@@ -9,7 +9,7 @@ function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
   const intl = useIntl();
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-biscay-500">
+    <nav className="flex flex-wrap items-center justify-between p-6 bg-biscay-500">
       <div className="flex items-center flex-shrink-0 mr-6 text-white">
         <span className="text-xl font-semibold tracking-tight">Logo TODO</span>
       </div>
@@ -30,7 +30,7 @@ function Header({ siteTitle }) {
         <div className="flex items-baseline ml-10 space-x-2 lg:flex-grow">
           <LocalizedLink
             to="/"
-            className="px-3 py-2 text-base  font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
+            className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
           >
             {intl.formatMessage({ id: "home" })}
           </LocalizedLink>

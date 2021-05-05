@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { LocalizedLink, LocalesList } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
+import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
@@ -10,6 +11,21 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Seo title={intl.formatMessage({ id: "home" })} />
+      <header className="hero">
+        <StaticImage
+          src="../images/home.jpg"
+          alt="28 nentori"
+          className="hero-img"
+          placeholder="tracedSVG"
+          // layout="fullWidth"
+        ></StaticImage>
+        <div className="hero-container">
+          <div className="hero-text">
+            <h1>simply recipes</h1>
+            <h4>no fluff, just recipes</h4>
+          </div>
+        </div>
+      </header>
       <div className="p-6 text-white bg-biscay-500 dark:bg-biscay-900">
         <h1 className="">{intl.formatMessage({ id: "helloWorld" })}</h1>
         <p>{intl.formatMessage({ id: "indexNote" })}</p>
