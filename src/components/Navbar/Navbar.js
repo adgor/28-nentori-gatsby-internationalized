@@ -9,7 +9,7 @@ function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
   const intl = useIntl();
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 bg-biscay-500">
+    <nav className="flex flex-wrap items-center justify-between px-6 py-4 bg-biscay-500">
       <div className="flex items-center flex-shrink-0 mr-6 text-white">
         <span className="text-xl font-semibold tracking-tight">Logo TODO</span>
       </div>
