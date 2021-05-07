@@ -11,9 +11,13 @@
   "thirdNote": "This is the third page",
   "notFound": "Page not found",
   "home": "Home",
+  "heroTitle1": "Welcome to",
+  "heroTitle2": "MHS 28 NOVEMBER",
+  "heroSubTitle": "High school is the connecting bridge with the fulfillment of perspectives and achievements for a good job, a good status and above all a socially prosperous individual that society needs.",
   "projects": "Projects",
   "teachingStaff": "Teaching staff",
   "program": "Program",
   "contact": "Contact us",
-  "aboutUs": "About us"
+  "aboutUs": "About us",
+  "learnMore": "Learn more"
 }

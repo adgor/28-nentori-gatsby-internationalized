@@ -3,12 +3,14 @@ import { LocalizedLink } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import Mission from "../components/sections/Mission";
 
 const Page3 = () => {
   const intl = useIntl();
   return (
     <Layout>
       <Seo title={intl.formatMessage({ id: "thirdPage" })} />
+      <Mission />
       <h1>{intl.formatMessage({ id: "thirdPage" })}</h1>
       <p>{intl.formatMessage({ id: "thirdNote" })}</p>
       <p>
