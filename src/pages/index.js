@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Mission from "../components/sections/Mission";
+import { Stats } from "../components/Stats";
 
 const Index = ({ data }) => {
   const intl = useIntl();
@@ -45,6 +46,9 @@ const Index = ({ data }) => {
 
       {/* Mision */}
       <Mission />
+
+      {/* Stats */}
+      <Stats />
 
       <div className="p-6 text-white bg-biscay-500 dark:bg-biscay-900">
         <h1 className="">{intl.formatMessage({ id: "helloWorld" })}</h1>

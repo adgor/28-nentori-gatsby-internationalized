@@ -5,6 +5,10 @@ module.exports = {
     description: `Default example for i18n with react-i18next`,
     author: `LekoArts`,
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    FAST_DEV: true,
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
