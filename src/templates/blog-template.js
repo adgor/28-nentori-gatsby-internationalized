@@ -9,7 +9,7 @@ const BlogTemplate = ({ data, pageContext }) => {
     <Layout>
       <Seo title={data.mdx.frontmatter.title} />
       <h1>Data</h1>
-      <div>
+      <div className="prose ">
         {data.mdx ? (
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         ) : (
