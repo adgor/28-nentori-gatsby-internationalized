@@ -3,6 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        "90vh": "90vh",
+        "40vh": "40vh",
+      },
       colors: {
         laRioja: {
           50: "#fbfcf4",
