@@ -7,6 +7,8 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Mission from "../components/sections/Mission";
 import { Stats } from "../components/Stats";
+import Blog from "../components/Blog";
+import BlogArticle from "../components/BlogArticle";
 
 const Index = ({ data }) => {
   const intl = useIntl();
@@ -49,6 +51,17 @@ const Index = ({ data }) => {
 
       {/* Stats */}
       <Stats />
+
+      {/* Blog */}
+      <Blog>
+        {data.allFile.nodes.map(({ childMdx: node }) => (
+          <BlogArticle
+            key={node.frontmatter.slug}
+            slug={node.frontmatter.slug}
+            title={node.frontmatter.title}
+          />
+        ))}
+      </Blog>
 
       <div className="p-6 text-white bg-biscay-500 dark:bg-biscay-900">
         <h1 className="">{intl.formatMessage({ id: "helloWorld" })}</h1>
