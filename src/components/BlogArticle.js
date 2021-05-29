@@ -3,17 +3,20 @@ import { LocalizedLink } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
 import { HiArrowRight } from "react-icons/hi";
 
-function BlogArticle({ slug, title }) {
+function BlogArticle({ slug, title, img }) {
   const intl = useIntl();
+
   return (
     <div className="overflow-hidden transition-shadow duration-300 bg-white rounded">
       <LocalizedLink to={slug} aria-label="Article">
+        {img}
         {/* TODO: fix image for blog section */}
-        <img
+
+        {/* <img
           src="https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
           className="object-cover w-full h-64 rounded"
           alt=""
-        />
+        /> */}
       </LocalizedLink>
       <div className="py-5">
         <p className="mb-2 text-xs font-medium text-paleSky-600">13 Jul 2020</p>

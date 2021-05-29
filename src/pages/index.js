@@ -59,6 +59,7 @@ const Index = ({ data }) => {
             key={node.frontmatter.slug}
             slug={node.frontmatter.slug}
             title={node.frontmatter.title}
+            // img={}
           />
         ))}
       </Blog>
