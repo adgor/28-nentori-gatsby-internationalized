@@ -2,14 +2,15 @@ import React from "react";
 import { LocalizedLink } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
 import { HiArrowRight } from "react-icons/hi";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-function BlogArticle({ slug, title, img }) {
+function BlogArticle({ slug, title, img, alt }) {
   const intl = useIntl();
 
   return (
     <div className="overflow-hidden transition-shadow duration-300 bg-white rounded">
       <LocalizedLink to={slug} aria-label="Article">
-        {img}
+        <GatsbyImage image={img} alt={alt} className="w-full h-64 rounded" />
         {/* TODO: fix image for blog section */}
 
         {/* <img

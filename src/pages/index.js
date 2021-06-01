@@ -59,7 +59,8 @@ const Index = ({ data }) => {
             key={node.frontmatter.slug}
             slug={node.frontmatter.slug}
             title={node.frontmatter.title}
-            // img={}
+            img={node.frontmatter.image.childImageSharp.gatsbyImageData}
+            alt={node.frontmatter.image.name}
           />
         ))}
       </Blog>
@@ -118,6 +119,12 @@ export const query = graphql`
           frontmatter {
             slug
             title
+            image {
+              name
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
+              }
+            }
           }
         }
       }
