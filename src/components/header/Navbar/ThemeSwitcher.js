@@ -1,5 +1,5 @@
 import React from "react";
-import useDarkMode from "../../hook/useDarkMode";
+import useDarkMode from "../../../hook/useDarkMode";
 import { HiMoon, HiSun } from "react-icons/hi";
 
 export default function ThemeSwitcher() {

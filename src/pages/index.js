@@ -3,12 +3,13 @@ import { graphql } from "gatsby";
 import { LocalizedLink, LocalesList } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
 import { StaticImage } from "gatsby-plugin-image";
-import Layout from "../components/layout";
+import Layout from "../components/header/layout";
 import Seo from "../components/seo";
 import Mission from "../components/sections/Mission";
 import { Stats } from "../components/Stats";
 import Blog from "../components/Blog";
 import BlogArticle from "../components/BlogArticle";
+import { TeachingProcess } from "../components/TeachingProcess";
 
 const Index = ({ data }) => {
   const intl = useIntl();
@@ -65,10 +66,9 @@ const Index = ({ data }) => {
         ))}
       </Blog>
 
-      <div className="p-6 text-white bg-biscay-500 dark:bg-biscay-900">
-        <h1 className="">{intl.formatMessage({ id: "helloWorld" })}</h1>
-        <p>{intl.formatMessage({ id: "indexNote" })}</p>
-      </div>
+      {/* Teaching Process */}
+      <TeachingProcess />
+
       <p>
         <LocalizedLink to="/page-2/">
           {intl.formatMessage({ id: "secondPageLink" })}

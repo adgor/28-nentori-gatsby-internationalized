@@ -1,0 +1,21 @@
+.scroller {
+  animation: 35s scroll alternate infinite;
+}
+
+.scroller:first-child {
+  animation-duration: 40s;
+}
+
+.scroller:nth-child(2) {
+  animation-duration: 45s;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-90%);
+  }
+}

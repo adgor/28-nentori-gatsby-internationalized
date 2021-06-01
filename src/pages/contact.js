@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LocalizedLink } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
-import Layout from "../components/layout";
+import Layout from "../components/header/layout";
 import Seo from "../components/seo";
 
 const Page3 = () => {
