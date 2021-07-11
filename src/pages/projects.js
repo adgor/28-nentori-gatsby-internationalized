@@ -34,6 +34,7 @@ const Projects = ({ data }) => {
             // key={node.frontmatter.slug}
             slug={node.frontmatter.slug}
             title={node.frontmatter.title}
+            year={node.frontmatter.year}
           />
         ))}
       </ProjectsLists>
@@ -46,6 +47,7 @@ export default Projects;
 export const query = graphql`
   query($locale: String!) {
     allFile(
+      sort: { fields: childrenMdx___frontmatter___year, order: DESC }
       filter: {
         sourceInstanceName: { eq: "blog" }
         childMdx: { fields: { locale: { eq: $locale } } }
@@ -56,6 +58,7 @@ export const query = graphql`
           frontmatter {
             slug
             title
+            year
           }
         }
       }

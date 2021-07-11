@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 import { HiArrowRight } from "react-icons/hi";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-function BlogArticle({ slug, title, img, alt }) {
+function BlogArticle({ slug, title, img, alt, date, year }) {
   const intl = useIntl();
 
   return (
@@ -20,7 +20,7 @@ function BlogArticle({ slug, title, img, alt }) {
         /> */}
       </LocalizedLink>
       <div className="py-5">
-        <p className="mb-2 text-xs font-medium text-paleSky-600">13 Jul 2020</p>
+        <p className="mb-2 text-xs font-medium text-paleSky-600">{date}</p>
         <LocalizedLink
           to={slug}
           aria-label="Article"
@@ -42,7 +42,7 @@ function BlogArticle({ slug, title, img, alt }) {
             <HiArrowRight className="w-4 h-4 ml-2" />
           </LocalizedLink>
           <span className="inline-flex items-center py-1 ml-auto text-sm font-semibold leading-none text-paleSky-600 lg:ml-auto md:ml-0">
-            2013/14
+            {year}
           </span>
         </div>
       </div>

@@ -32,6 +32,8 @@ const Index = ({ data }) => {
             key={node.frontmatter.slug}
             slug={node.frontmatter.slug}
             title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            year={node.frontmatter.year}
             img={node.frontmatter.image.childImageSharp.gatsbyImageData}
             alt={node.frontmatter.image.name}
           />
@@ -50,9 +52,13 @@ export const query = graphql`
   query($locale: String!) {
     allFile(
       limit: 3
+      sort: { fields: childrenMdx___frontmatter___date, order: ASC }
       filter: {
         sourceInstanceName: { eq: "blog" }
-        childMdx: { fields: { locale: { eq: $locale } } }
+        childMdx: {
+          frontmatter: { featured: { eq: true } }
+          fields: { locale: { eq: $locale } }
+        }
       }
     ) {
       nodes {
@@ -60,6 +66,8 @@ export const query = graphql`
           frontmatter {
             slug
             title
+            date
+            year
             image {
               name
               childImageSharp {
