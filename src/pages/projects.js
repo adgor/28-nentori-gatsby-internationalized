@@ -1,28 +1,64 @@
 import * as React from "react";
-import { LocalizedLink } from "gatsby-theme-i18n";
+import { graphql } from "gatsby";
 import { useIntl } from "react-intl";
 import Layout from "../components/header/layout";
 import Seo from "../components/seo";
+import HeroPages from "../components/HeroPages";
+import { StaticImage } from "gatsby-plugin-image";
+import { ProjectsLists } from "../components/ProjectsLists";
+import ProjectsListItem from "../components/ProjectsListItem";
 
-const Page3 = () => {
+const Projects = ({ data }) => {
   const intl = useIntl();
   return (
     <Layout>
-      <Seo title={intl.formatMessage({ id: "thirdPage" })} />
-      <h1>{intl.formatMessage({ id: "thirdPage" })}</h1>
-      <p>{intl.formatMessage({ id: "thirdNote" })}</p>
-      <p>
-        <LocalizedLink to="/page-2/">
-          {intl.formatMessage({ id: "secondPageLink" })}
-        </LocalizedLink>
-      </p>
-      <p>
-        <LocalizedLink to="/">
-          {intl.formatMessage({ id: "indexPageLink" })}
-        </LocalizedLink>
-      </p>
+      <Seo title={intl.formatMessage({ id: "projects" })} />
+
+      <HeroPages
+        heroImg={
+          <StaticImage
+            src="../images/projekte.jpg"
+            alt="eggs"
+            className="h-full "
+            placeholder="tracedSVG"
+            layout="fullWidth"
+          ></StaticImage>
+        }
+        pageTitle={intl.formatMessage({ id: "projectsTitle" })}
+        pageSubTitle={intl.formatMessage({ id: "projectsSubTitle" })}
+      />
+
+      <ProjectsLists>
+        {data.allFile.nodes.map(({ childMdx: node }) => (
+          <ProjectsListItem
+            // key={node.frontmatter.slug}
+            slug={node.frontmatter.slug}
+            title={node.frontmatter.title}
+          />
+        ))}
+      </ProjectsLists>
     </Layout>
   );
 };
 
-export default Page3;
+export default Projects;
+
+export const query = graphql`
+  query($locale: String!) {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "blog" }
+        childMdx: { fields: { locale: { eq: $locale } } }
+      }
+    ) {
+      nodes {
+        childMdx {
+          frontmatter {
+            slug
+            title
+          }
+        }
+      }
+    }
+  }
+`;

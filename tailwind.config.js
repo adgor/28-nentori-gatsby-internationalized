@@ -6,6 +6,7 @@ module.exports = {
       spacing: {
         "90vh": "90vh",
         "40vh": "40vh",
+        "56vh": "56vh",
       },
       colors: {
         laRioja: {
