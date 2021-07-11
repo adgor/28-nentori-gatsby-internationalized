@@ -1,28 +1,36 @@
 import * as React from "react";
-import { LocalizedLink } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
 import Layout from "../components/header/layout";
 import Seo from "../components/seo";
+import HeroPages from "../components/HeroPages";
+import { StaticImage } from "gatsby-plugin-image";
+import StaffTable from "../components/StaffTable";
 
-const Page3 = () => {
+const Staff = () => {
   const intl = useIntl();
+
   return (
     <Layout>
-      <Seo title={intl.formatMessage({ id: "thirdPage" })} />
-      <h1>{intl.formatMessage({ id: "thirdPage" })}</h1>
-      <p>{intl.formatMessage({ id: "thirdNote" })}</p>
-      <p>
-        <LocalizedLink to="/page-2/">
-          {intl.formatMessage({ id: "secondPageLink" })}
-        </LocalizedLink>
-      </p>
-      <p>
-        <LocalizedLink to="/">
-          {intl.formatMessage({ id: "indexPageLink" })}
-        </LocalizedLink>
-      </p>
+      <Seo title={intl.formatMessage({ id: "aboutUs" })} />
+
+      {/* Hero Section */}
+      <HeroPages
+        heroImg={
+          <StaticImage
+            src="../images/staff-cabinet.jpg"
+            alt="eggs"
+            className="h-full "
+            placeholder="tracedSVG"
+            layout="fullWidth"
+          ></StaticImage>
+        }
+        pageTitle={intl.formatMessage({ id: "staffTitle" })}
+        pageSubTitle={intl.formatMessage({ id: "staffSubTitle" })}
+      />
+
+      <StaffTable />
     </Layout>
   );
 };
 
-export default Page3;
+export default Staff;
