@@ -31,7 +31,7 @@ const Projects = ({ data }) => {
       <ProjectsLists>
         {data.allFile.nodes.map(({ childMdx: node }) => (
           <ProjectsListItem
-            // key={node.frontmatter.slug}
+            key={node.frontmatter.slug}
             slug={node.frontmatter.slug}
             title={node.frontmatter.title}
             year={node.frontmatter.year}

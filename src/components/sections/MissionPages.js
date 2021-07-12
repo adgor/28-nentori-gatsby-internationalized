@@ -31,14 +31,14 @@ const MissionPages = ({
         <div className="mt-4 lg:mt-0 lg:max-w-lg lg:w-full">{sectionImg}</div>
       </div>
 
-      <div class=" flex flex-col items-center px-5 pb-10 mx-auto lg:flex-row">
-        <div class="flex flex-col items-start text-left lg:flex-grow lg:w-1/2 lg:pl-14 ">
-          <h2 class="mb-2 text-3xl font-bold text-biscay-500">
+      <div className="flex flex-col items-center px-5 pb-10 mx-auto  lg:flex-row">
+        <div className="flex flex-col items-start text-left lg:flex-grow lg:w-1/2 lg:pl-14 ">
+          <h2 className="mb-2 text-3xl font-bold text-biscay-500">
             {sectionTitle2}
           </h2>
           <DescP text={sectionDescKushtet} />
         </div>
-        <div class="order-last mt-6 lg:mt-0 lg:max-w-lg lg:order-first lg:w-full">
+        <div className="order-last mt-6 lg:mt-0 lg:max-w-lg lg:order-first lg:w-full">
           {sectionImg2}
         </div>
       </div>

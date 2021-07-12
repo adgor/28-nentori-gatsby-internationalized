@@ -37,25 +37,21 @@ const Program = () => {
           <div className="grid py-8 sm:grid-cols-4">
             <div className="mb-4 sm:mb-0">
               <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                <p
-                  className="transition-colors duration-200 text-biscay-900"
-                  aria-label="Category"
-                >
+                <p className=" text-ceriseRed-500" aria-label="Category">
                   {intl.formatMessage({ id: "program" })}
                 </p>
-                <p className="text-gray-600 capitalize">
+                <p className="capitalize text-paleSky-600">
                   {intl.formatMessage({ id: "diber" })} 2020
                 </p>
               </div>
             </div>
             <div className="sm:col-span-3 lg:col-span-2">
               <div className="mb-3">
-                <p className="inline-block text-3xl font-extrabold leading-none transition-colors duration-200 text-mirage-900 hover:text-biscay-500 sm:text-4xl xl:text-4xl">
-                  TODO from Blog article Template
+                <p className="inline-block text-3xl font-extrabold leading-none transition-colors duration-200 text-biscay-500 hover:text-biscay-900 sm:text-4xl xl:text-4xl">
                   {intl.formatMessage({ id: "annualProgram" })}
                 </p>
               </div>
-              <p className="text-paleSky-600">
+              <p className="leading-relaxed text-paleSky-700">
                 {intl.formatMessage({ id: "annualProgramDesc" })}
               </p>
             </div>

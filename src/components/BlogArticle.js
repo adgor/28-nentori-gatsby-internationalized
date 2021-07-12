@@ -11,13 +11,6 @@ function BlogArticle({ slug, title, img, alt, date, year }) {
     <div className="overflow-hidden transition-shadow duration-300 bg-white rounded">
       <LocalizedLink to={slug} aria-label="Article">
         <GatsbyImage image={img} alt={alt} className="w-full h-64 rounded" />
-        {/* TODO: fix image for blog section */}
-
-        {/* <img
-          src="https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-          className="object-cover w-full h-64 rounded"
-          alt=""
-        /> */}
       </LocalizedLink>
       <div className="py-5">
         <p className="mb-2 text-xs font-medium text-paleSky-600">{date}</p>
