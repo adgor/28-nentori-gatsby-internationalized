@@ -21,8 +21,6 @@
   "parallellNum": "Numri i paraleleve",
   "passToUny": "Kalojnë në Universitete",
   "teachingStaff": "Stafi i mesuesve",
-  "program": "Programi",
-  "contact": "Kontakte",
   "aboutUs": "Rreth nesh",
   "aboutTitle": "Për shkollën tonë",
   "aboutSubTitle": "Shkolla jonë është Shkolla e Mesme e vetme në qytetin tonë. Ne fokusohemi në zhvillimin shkollor, rritjen personale dhe pasurimin etik.",
@@ -41,6 +39,15 @@
   "position": "TITULLI",
   "email": "EMAIL",
   "socialMedia": "RRJETET SOCIALE",
+  "program": "Programi",
+  "programTitle": "Programi",
+  "programSubTitle": "Shkolla jonë është Shkolla e Mesme e vetme në qytetin tonë. Ne fokusohemi në zhvillimin shkollor, rritjen personale dhe pasurimin etik.",
+  "diber": "Dibër",
+  "annualProgram": "Programi Vjetor",
+  "annualProgramDesc": "për punë në shkollën e mesme SH.M.K. ”28 NENTORI” - DIBËR për vitin Shkollor 2020/2021",
+  "contact": "Kontakte",
+  "contactTitle": "Kontakte",
+  "contactSubTitle": "Shkolla jonë është Shkolla e Mesme e vetme në qytetin tonë. Ne fokusohemi në zhvillimin shkollor, rritjen personale dhe pasurimin etik.",
 
   "learnMore": "Mëso më shumë"
 }

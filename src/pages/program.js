@@ -1,28 +1,82 @@
 import * as React from "react";
-import { LocalizedLink } from "gatsby-theme-i18n";
 import { useIntl } from "react-intl";
 import Layout from "../components/header/layout";
 import Seo from "../components/seo";
+import HeroPages from "../components/HeroPages";
+import { StaticImage } from "gatsby-plugin-image";
+import { HiArrowRight } from "react-icons/hi";
+import PDF from "../../static/PROGRAMI-VJETOR-2020-2021.pdf";
 
-const Page3 = () => {
+const Program = () => {
   const intl = useIntl();
+
   return (
     <Layout>
-      <Seo title={intl.formatMessage({ id: "thirdPage" })} />
-      <h1>{intl.formatMessage({ id: "thirdPage" })}</h1>
-      <p>{intl.formatMessage({ id: "thirdNote" })}</p>
-      <p>
-        <LocalizedLink to="/page-2/">
-          {intl.formatMessage({ id: "secondPageLink" })}
-        </LocalizedLink>
-      </p>
-      <p>
-        <LocalizedLink to="/">
-          {intl.formatMessage({ id: "indexPageLink" })}
-        </LocalizedLink>
-      </p>
+      <Seo title={intl.formatMessage({ id: "program" })} />
+
+      {/* Hero Section */}
+      <HeroPages
+        heroImg={
+          <StaticImage
+            src="../images/klasa.jpg"
+            alt="eggs"
+            className="h-full "
+            placeholder="tracedSVG"
+            layout="fullWidth"
+          ></StaticImage>
+        }
+        pageTitle={intl.formatMessage({ id: "programTitle" })}
+        pageSubTitle={intl.formatMessage({ id: "programSubTitle" })}
+      />
+
+      <div
+        id="missioni"
+        className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+      >
+        <div className="mb-10 border-t border-b divide-y">
+          <div className="grid py-8 sm:grid-cols-4">
+            <div className="mb-4 sm:mb-0">
+              <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
+                <p
+                  className="transition-colors duration-200 text-biscay-900"
+                  aria-label="Category"
+                >
+                  {intl.formatMessage({ id: "program" })}
+                </p>
+                <p className="text-gray-600 capitalize">
+                  {intl.formatMessage({ id: "diber" })} 2020
+                </p>
+              </div>
+            </div>
+            <div className="sm:col-span-3 lg:col-span-2">
+              <div className="mb-3">
+                <p className="inline-block text-3xl font-extrabold leading-none transition-colors duration-200 text-mirage-900 hover:text-biscay-500 sm:text-4xl xl:text-4xl">
+                  TODO from Blog article Template
+                  {intl.formatMessage({ id: "annualProgram" })}
+                </p>
+              </div>
+              <p className="text-paleSky-600">
+                {intl.formatMessage({ id: "annualProgramDesc" })}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          <a
+            rel="noopener noreferrer"
+            href={PDF}
+            target="_blank"
+            aria-label="Programi vjetor"
+            className="inline-flex items-center font-semibold duration-700 ease-in-out ransition hover:text-ceriseRed-700 text-ceriseRed-500 md:mb-2 lg:mb-0"
+          >
+            {intl.formatMessage({ id: "learnMore" })}
+
+            <HiArrowRight className="w-4 h-4 ml-2" />
+          </a>
+        </div>
+      </div>
     </Layout>
   );
 };
 
-export default Page3;
+export default Program;
