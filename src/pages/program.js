@@ -45,7 +45,7 @@ const Program = () => {
                 </p>
               </div>
             </div>
-            <div className="sm:col-span-3 lg:col-span-2">
+            <div className=" sm:col-span-3 lg:col-span-2">
               <div className="mb-3">
                 <p className="inline-block text-3xl font-extrabold leading-none transition-colors duration-200 text-biscay-500 hover:text-biscay-900 sm:text-4xl xl:text-4xl">
                   {intl.formatMessage({ id: "annualProgram" })}
@@ -54,21 +54,21 @@ const Program = () => {
               <p className="leading-relaxed text-paleSky-700">
                 {intl.formatMessage({ id: "annualProgramDesc" })}
               </p>
+              <div className="mt-5">
+                <a
+                  rel="noopener noreferrer"
+                  href={PDF}
+                  target="_blank"
+                  aria-label="Programi vjetor"
+                  className="inline-flex items-center font-semibold duration-700 ease-in-out ransition hover:text-ceriseRed-700 text-ceriseRed-500 md:mb-2 lg:mb-0"
+                >
+                  {intl.formatMessage({ id: "learnMore" })}
+
+                  <HiArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="text-center">
-          <a
-            rel="noopener noreferrer"
-            href={PDF}
-            target="_blank"
-            aria-label="Programi vjetor"
-            className="inline-flex items-center font-semibold duration-700 ease-in-out ransition hover:text-ceriseRed-700 text-ceriseRed-500 md:mb-2 lg:mb-0"
-          >
-            {intl.formatMessage({ id: "learnMore" })}
-
-            <HiArrowRight className="w-4 h-4 ml-2" />
-          </a>
         </div>
       </div>
     </Layout>

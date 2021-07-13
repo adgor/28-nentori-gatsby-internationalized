@@ -4,6 +4,7 @@ import Layout from "../components/header/layout";
 import Seo from "../components/seo";
 import HeroPages from "../components/HeroPages";
 import { StaticImage } from "gatsby-plugin-image";
+import { ContactDetails } from "../components/ContactDeatils";
 
 const Contact = () => {
   const intl = useIntl();
@@ -26,6 +27,8 @@ const Contact = () => {
         pageTitle={intl.formatMessage({ id: "contactTitle" })}
         pageSubTitle={intl.formatMessage({ id: "contactSubTitle" })}
       />
+
+      <ContactDetails />
     </Layout>
   );
 };

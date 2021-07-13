@@ -63,7 +63,7 @@ function Header() {
             <LocalizedLink
               key={navLink.id}
               to={navLink.path}
-              className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white"
+              className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white active:bg-biscay-400"
             >
               {intl.formatMessage({ id: navLink.title })}
             </LocalizedLink>
