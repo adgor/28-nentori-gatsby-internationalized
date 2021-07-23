@@ -50,7 +50,7 @@ export const ContactDetails = () => {
               const Icon = icons[index];
 
               return (
-                <div className="max-w-md ">
+                <div key={index} className="max-w-md ">
                   <Icon className="w-8 h-8 mb-2 text-biscay-500" />
                   <a
                     target="_blank"
@@ -76,6 +76,8 @@ export const ContactDetails = () => {
             <a
               key={index}
               href={uLink.link}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={intl.formatMessage({ id: uLink.title })}
               title={intl.formatMessage({ id: uLink.title })}
               className="flex items-center px-6 py-2 mb-2 transition-colors duration-300 border rounded shadow text-biscay-400 hover:border-biscay-400 hover:bg-biscay-400 hover:text-white"
