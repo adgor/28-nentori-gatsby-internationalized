@@ -110,6 +110,8 @@ module.exports = {
   },
   variants: {
     extend: {
+      textColor: ["visited"],
+      opacity: ["disabled"],
       backgroundColor: ["active"],
     },
   },
