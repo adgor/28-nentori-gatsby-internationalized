@@ -1,6 +1,6 @@
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ description, title, children }) => {
   const { site } = useStaticQuery(
@@ -15,12 +15,12 @@ const Seo = ({ description, title, children }) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = site.siteMetadata.description || description;
 
   return (
-    <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
+    <Helmet title={title} titleTemplate={`${site.siteMetadata.title} - %s`}>
       <meta name="description" content={metaDescription} />
       <meta name="og:title" content={title} />
       <meta name="og:description" content={metaDescription} />
@@ -31,7 +31,7 @@ const Seo = ({ description, title, children }) => {
       <meta name="twitter:description" content={metaDescription} />
       {children}
     </Helmet>
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;
