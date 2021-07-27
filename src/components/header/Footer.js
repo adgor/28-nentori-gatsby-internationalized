@@ -33,7 +33,7 @@ export const Footer = () => {
               to="/"
               aria-label={intl.formatMessage({ id: "name" })}
               title={intl.formatMessage({ id: "name" })}
-              class="inline-flex items-center mr-8"
+              className="inline-flex items-center mr-8"
             >
               <svg
                 className="w-12 "
@@ -48,9 +48,7 @@ export const Footer = () => {
               </svg>
 
               <span
-                class="
-              ml-2 text-xl font-bold tracking-wide uppercase text-biscay-500
-              "
+                className="ml-2 text-xl font-bold tracking-wide uppercase  text-biscay-500"
               >
                 {intl.formatMessage({ id: "name" })}
               </span>
