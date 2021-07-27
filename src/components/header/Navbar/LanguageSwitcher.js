@@ -9,12 +9,16 @@ export default function LanguageSwitcher() {
   config.forEach((item) => (path = path.replace(`${item.code}/`, "")));
 
   return (
-    <div>
+    <div className="flex space-x-1 ">
       {config.map((lang) => (
-        <LocalizedLink to={path} key={lang.code} language={lang.code}>
-          <span className="mr-2 text-sm text-paleSky-300 hover:text-white">
-            {lang.code.toUpperCase()}
-          </span>
+        <LocalizedLink
+          activeClassName="active"
+          to={path}
+          key={lang.code}
+          language={lang.code}
+          className="px-2 py-1 text-sm rounded-md hover:bg-biscay-700 hover:text-white text-paleSky-300"
+        >
+          <span>{lang.code.toUpperCase()}</span>
         </LocalizedLink>
       ))}
     </div>
