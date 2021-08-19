@@ -31,8 +31,9 @@ const Index = ({ data }) => {
           <BlogArticle
             key={node.frontmatter.slug}
             slug={node.frontmatter.slug}
+            category={node.frontmatter.category}
             title={node.frontmatter.title}
-            date={node.frontmatter.date}
+            excerpt={node.frontmatter.excerpt}
             year={node.frontmatter.year}
             img={node.frontmatter.image.childImageSharp.gatsbyImageData}
             alt={node.frontmatter.image.name}
@@ -52,7 +53,7 @@ export const query = graphql`
   query($locale: String!) {
     allFile(
       limit: 3
-      sort: { fields: childrenMdx___frontmatter___date, order: ASC }
+      sort: { fields: childrenMdx___frontmatter___year, order: DESC }
       filter: {
         sourceInstanceName: { eq: "blog" }
         childMdx: {
@@ -66,7 +67,8 @@ export const query = graphql`
           frontmatter {
             slug
             title
-            date
+            category
+            excerpt
             year
             image {
               name

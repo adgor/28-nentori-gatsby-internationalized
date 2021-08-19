@@ -44,7 +44,9 @@ const Projects = ({ data, pageContext }) => {
             key={node.frontmatter.slug}
             slug={node.frontmatter.slug}
             title={node.frontmatter.title}
+            category={node.frontmatter.category}
             year={node.frontmatter.year}
+            excerpt={node.frontmatter.excerpt}
           />
         ))}
         <ProjectsPagination
@@ -84,7 +86,9 @@ export const query = graphql`
           frontmatter {
             slug
             title
+            category
             year
+            excerpt
           }
         }
       }

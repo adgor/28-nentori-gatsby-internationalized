@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "28 nentori",
-    siteUrl: `https://gatsby-theme-i18n-react-i18next.netlify.app`,
+    siteUrl: `https://28nentori.netlify.app`,
     description: `Default example for i18n with react-i18next`,
     author: `LekoArts`,
   },

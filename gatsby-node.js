@@ -1,8 +1,21 @@
+// embed local images in frontmatter
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  createTypes(`
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter!
+    }
+    type MdxFrontmatter {
+      embeddedImagesLocal: [File] @fileByRelativePath
+    }
+  `);
+};
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
   const blogTemplate = require.resolve(`./src/templates/blog-template.js`);
-  const blogListTemplate = require.resolve(`./src/templates/blog-list.js`);
 
   const result = await graphql(`
     {
@@ -37,10 +50,30 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
+  // ******
+  // PAGINATION
+  // ******
+
+  // Blog list pagination
+  const blogListTemplate = require.resolve(`./src/templates/blog-list.js`);
+
+  // Create blog-list pages without extention different than locale
+  const resultList = await graphql(`
+    {
+      blogList: allMdx(filter: { fields: { locale: { ne: "en" } } }) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `);
+
   // Create blog-list pages
-  const posts = result.data.blog.nodes;
+  const postsList = resultList.data.blogList.nodes;
   const postsPerPage = 6;
-  const numPages = Math.ceil(posts.length / postsPerPage);
+  const numPages = Math.ceil(postsList.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/projects` : `/projects/${i + 1}`,
@@ -53,4 +86,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     });
   });
+
+  // ******
+  // END OF PAGINATION
+  // ******
 };
