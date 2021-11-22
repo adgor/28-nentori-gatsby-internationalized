@@ -9,7 +9,8 @@ export const Stats = () => {
   const intl = useIntl();
 
   return (
-    <div className="px-4 py-16 mx-auto text-white bg-biscay-500 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className='bg-biscay-500'>
+      <div className="px-4 py-16 mx-auto text-white sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl pb-4 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <h2 className="max-w-lg mb-2 font-sans text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto">
           {intl.formatMessage({ id: "ourPorpouse" })}
@@ -42,5 +43,7 @@ export const Stats = () => {
         />
       </div>
     </div>
+    </div>
+    
   );
 };
