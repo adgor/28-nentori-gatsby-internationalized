@@ -21,8 +21,8 @@ export const Galery = () => {
 
   return (
     <section>
-      <div className="px-5 pt-2 pb-24 mx-auto ">
-        <div className="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4">
+      <div className="px-4 py-5 pt-2 pb-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-2">
           {nodes.map((image, index) => {
             const { name } = image;
             return (

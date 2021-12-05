@@ -53,7 +53,9 @@ export default function StaffTitle() {
   const intl = useIntl();
   return (
     <section id="missioni">
-      <div className="container px-5 py-20 mx-auto">
+      <div
+        className="container px-4 py-20 pr-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 "
+      >
         <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
