@@ -9,7 +9,7 @@ const HeroPages = ({ heroImg, pageTitle, pageSubTitle }) => {
 
       <div className="absolute top-0 w-full h-full bg-opacity-75 bg-mirage-900">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="flex flex-wrap pt-12">
+          <div className="flex flex-wrap ">
             <div className="w-full md:w-8/12 lg:w-6/12 xl:w-5/12">
               <h1 className="text-4xl font-bold text-left text-white lg:text-5xl lg:leading-normal">
                 {pageTitle}

@@ -29,9 +29,9 @@ const BlogTemplate = ({ data }) => {
                             return (
                               <div
                                 key={index}
-                                className="p-2 mb-6 md:w-1/2 lg:w-1/3 sm:mb-0"
+                                className="w-full p-2 mb-6 md:w-1/2 lg:w-1/3 sm:mb-0"
                               >
-                                <div className="h-64 overflow-hidden rounded-lg">
+                                <div className="h-full overflow-hidden rounded-lg sm:h-64">
                                   <GatsbyImage
                                     image={getImage(image)}
                                     // alt={name}
